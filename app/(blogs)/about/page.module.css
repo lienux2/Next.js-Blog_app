@@ -1,0 +1,36 @@
+.container {
+    margin: 90px auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.subheading {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.brandName {
+    color: #900c3f;
+    font-weight: bolder;
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.text {
+    text-align: center;
+    margin: 25px 0;
+}

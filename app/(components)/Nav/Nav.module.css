@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+  margin-bottom: 50px;
+  background-color: #a2798f;
+  color: #dfdfde;
+  font-size: 20px;
+  transition: font-size 0.4s;
+}
+
+.hover:hover {
+  font-size: 23px;
+}
