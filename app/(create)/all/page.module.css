@@ -3,6 +3,26 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
   margin: 50px 100px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  @media screen and (max-width: 1840px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
 }
 
 .heading {

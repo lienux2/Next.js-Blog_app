@@ -51,7 +51,9 @@ export default async function PostByID({ params }: { params: { id: string } }) {
 
                 <div className={style.info}>
                   <h1>{(blogById as Blog).title}</h1>
-                  <h3>{(blogById as Blog).tag}</h3>
+                  <Link href={`${(blogById as Blog).tag}`}>
+                    <h3>{(blogById as Blog).tag}</h3>
+                  </Link>
                   <h6>Written by {(blogById as Blog).author}</h6>
                 </div>
               </div>

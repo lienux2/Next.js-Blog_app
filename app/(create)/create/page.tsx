@@ -68,10 +68,10 @@ export default function Create() {
                 className={style.input}
               >
                 <option value="tag">Select tag</option>
-                <option value="Health">Health</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Exotic">Exotic</option>
-                <option value="Educational">Educational</option>
+                <option value="health">Health</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="exotic">Exotic</option>
+                <option value="educational">Educational</option>
               </select>
               <select
                 name="author"

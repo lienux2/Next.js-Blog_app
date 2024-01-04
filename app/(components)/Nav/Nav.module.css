@@ -9,6 +9,12 @@
   color: #dfdfde;
   font-size: 20px;
   transition: font-size 0.4s;
+
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 800px;
+  }
 }
 
 .hover:hover {

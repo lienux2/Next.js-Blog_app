@@ -6,24 +6,22 @@ import Image from "next/image";
 
 export default async function Home() {
   const allBlogs = await GET();
-  console.log("allBlogs:", allBlogs);
-  console.log("Type of allBlogs:", typeof allBlogs);
+
   return (
     <>
       <div className={style.welcomeMessage}>
         <h1 className={style.title}>Welcome to Paw in Hand!</h1>
         <p className={style.message}>
           Just as people find connection hand in hand, we believe in forging
-          bonds with our pets, <br /> going
-          <span className={style.brandName}>Paw in Hand</span> on the journey of
+          bonds with our pets, <br /> going <span className={style.brandName}>Paw in Hand</span> on the journey of
           companionship and joy.
         </p>
       </div>
       <div className={style.container}>
-        <h1></h1>
         <div>
           <Image
             src="https://picsum.photos/id/40/600/500"
+            className={style.image}
             width={600}
             height={500}
             alt="main_photo"

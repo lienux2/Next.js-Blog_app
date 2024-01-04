@@ -25,6 +25,7 @@ export default async function AllPosts({ params }: { params: { id: string } }) {
               <div className={style.cardContent}>
                 <Image
                   src={blog.image}
+                  className={style.image}
                   width={400}
                   height={400}
                   alt="post photo"
@@ -33,7 +34,7 @@ export default async function AllPosts({ params }: { params: { id: string } }) {
                 <p className={style.author}>{blog.author}</p>
               </div>
               <div className={style.btnWrapper}>
-                <Link href="/edit">
+                <Link href="/main">
                   <button className={style.editBtn}>Edit</button>
                 </Link>
                 <BlogDeleteButton deleteId={id} />

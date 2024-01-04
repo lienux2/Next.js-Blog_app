@@ -11,7 +11,9 @@ export default function CreateLayout({
   return (
     <html lang="en">
       <body className={exo2.className}>
-        <Provider>{children}</Provider>
+        {/* <Provider> */}
+          {children}
+          {/* </Provider> */}
       </body>
     </html>
   );

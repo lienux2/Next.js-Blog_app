@@ -10,7 +10,7 @@ export default async function Educational({
 }) {
   const tag: string = "Educational";
   const blogByTag = await getByTag({ params: { tag } });
-  console.log("blogByTag", blogByTag);
+
   return (
     <>
       <div className={style.container}>

@@ -14,6 +14,11 @@ Second, run the development server:
 npm run dev
 ```
 
+Third: create file named .env.local like so:
+![Alt text](image.png)
+and inside should be: 
+MONGODB_URI = (link to your mongoDB)
+
 Open [http://localhost:3000] with your browser to see the result.
 
 ## Client side pages (accessible through page naviagtions):
