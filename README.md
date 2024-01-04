@@ -15,7 +15,9 @@ npm run dev
 ```
 
 Third: create file named .env.local like so:
+
 ![Alt text](image.png)
+
 and inside should be: 
 MONGODB_URI = (link to your mongoDB)
 
