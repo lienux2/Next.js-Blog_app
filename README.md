@@ -14,11 +14,7 @@ Second, run the development server:
 npm run dev
 ```
 
-Third: create file named .env.local like so:
-
-![Alt text](image.png)
-
-and inside should be: 
+Third: create file named .env.local like so in picture below and inside should be: 
 MONGODB_URI = (link to your mongoDB)
 
 Open [http://localhost:3000] with your browser to see the result.
@@ -84,3 +80,5 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+![Alt text](image.png)
