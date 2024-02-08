@@ -1,4 +1,4 @@
-This is a [Next.js] project: My Blog for MD 18.
+This is a [Next.js] project: My Blog for MD 18...
 
 ## First Things first
 
