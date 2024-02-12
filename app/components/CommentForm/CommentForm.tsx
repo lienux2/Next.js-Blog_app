@@ -38,7 +38,7 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
 
     router.refresh();
     setFormData(initialFormData);
-    getAllComments();
+    await getAllComments();
     router.prefetch('all-comments')
   };
 
