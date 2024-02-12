@@ -11,6 +11,7 @@ type Blog = {
   _id: string;
   author: string;
   image: string;
+  postImage: string;
   title: string;
   tag: string;
   description: string;
@@ -19,7 +20,7 @@ type Blog = {
 
 export default async function EditPage({ params }: { params: { id: string } }) {
   const id: string = params.id;
-  const blogById = await GETONE({ params: { id } });
+  const blogById: Blog = await GETONE({ params: { id } });
 
   return (
     <>
