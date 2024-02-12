@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 70px 0;
+  flex-wrap: wrap;
+}
+
+.latestContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  word-wrap: break-word;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.blogsContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 50px;
+  max-width: 900px;
+}
+
+.image {
+  width: 600px;
+  height: 500px;
+  aspect-ratio: 1.2 / 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tag {
+  font-size: 18px;
+}
+
+.blogsImage {
+  width: 420px;
+  height: 420px;
+}
+
+@media (max-width: 1000px) {
+  .blogsContent {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .info {
+    padding: 0 50px;
+  }
+  .blogsImage {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    flex-wrap: wrap;
+  }
+  .postInfo {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .image {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogsContent {
+    gap: 10px;
+  }
+  .info {
+    padding: 0 50px;
+  }
+  .blogsImage {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 450px) {
+  .image {
+    width: 300px;
+    height: 200px;
+  }
+}

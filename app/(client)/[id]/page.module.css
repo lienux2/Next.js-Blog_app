@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 150px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 30px 0;
+  }
+  
+  .contentInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    min-width: 100px;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .paragraph {
+    text-align: justify;
+    max-width: 1200px;
+    min-width: 400px;
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  
+  .commentSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: large;
+  }
+  
+  .comment {
+    font-style: italic;
+  }
+  
+  .name {
+    color: brown;
+  }
+  
+  .commentInfo {
+    border: 1px solid black;
+    border-radius: 10px;
+   background-color: rgba(208, 19, 57, 0.262);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .commentTime {
+    font-size: 13px;
+    font-style: italic;
+    color: #666;
+  }

@@ -1,0 +1,37 @@
+.welcomeMessage {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .title {
+    font-size: 70px;
+    padding: 10px 0;
+  }
+  
+  .message {
+    font-size: 18px;
+    padding: 10px 10px;
+    line-height: 1.4;
+  }
+  
+  .brandName {
+    font-size: 24px;
+    color: #900c3f;
+    font-weight: bolder;
+  }
+  
+  @media (max-width: 750px) {
+    .title {
+      font-size: 50px;
+      padding: 10px 10px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .title {
+      font-size: 30px;
+      padding: 10px 0;
+      text-wrap: wrap;
+    }
+  }
+  

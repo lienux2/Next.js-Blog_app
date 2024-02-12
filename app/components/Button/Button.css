@@ -1,0 +1,60 @@
+button {
+    width: 100px;
+    font-weight: bold;
+    padding: 8px 0;
+    border: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.4s;
+  }
+  
+  button:hover {
+    opacity: 0.7;
+  }
+  
+  .readMore {
+    background-color: #8caba8;
+    font-size: larger;
+    width: 120px;
+  }
+  
+  .seePost {
+    background-color: blanchedalmond;
+  }
+  
+  .back {
+    background-color: darkolivegreen;
+    color: azure;
+  }
+  
+  .allPosts {
+    background-color: indianred;
+  }
+  
+  .add {
+    background-color: green;
+    color: antiquewhite;
+  }
+  
+  .delete {
+    background-color: crimson;
+    color: bisque;
+  }
+  
+  .edit {
+    background-color: cadetblue;
+  }
+  
+  .navigation {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 20px;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: opacity 0.4s, background-color 0.4s;
+  }
+  
+  .navigation:hover {
+    background-color: violet;
+  }
+  
