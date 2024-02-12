@@ -1,4 +1,5 @@
-This is a [Next.js] project: My Blog for MD 18...
+# Description
+Project made with Next.js with MongoDB for data storing.
 
 ## First Things first
 
@@ -31,17 +32,17 @@ Tag pages:
 
 About page: [http://localhost:3000/about]
 
-## Admin side pages (few accesible only with links, others via naviagtion):
+## Admin side pages (few accesible only with links, others via navigation):
 
 Login page: [http://localhost:3000/login] (credentials currently not working)
 
 Main page(with navigation): [http://localhost:3000/main]
 
-All Posts page: [http://localhost:3000/all] - see all posts here with option to delete (WIP) and edit (WIP) posts.
+All Posts page: [http://localhost:3000/all-posts] - see all posts here with option to delete (WIP) and edit (WIP) posts.
 
-All Comments page: [http://localhost:3000/comments] - see all comments here with option to delete (WIP) comments.
+All Comments page: [http://localhost:3000/all-comments] - see all comments here with option to delete (WIP) comments.
 
-Create Post page: [http://localhost:3000/create]
+Create Post page: [http://localhost:3000/create-post]
 
 ## WIP List
 
@@ -53,25 +54,30 @@ Create Post page: [http://localhost:3000/create]
 
 ## Project structure
 
-- (blogs) - page routes to client side pages. See **## Admin side pages**
-- (components) - self explanatory.
-- (create) - page routes to admin side pages. See **## Client side pages**
+- (client) - page routes to client side pages. See **## Client side pages**
+- components - components used in pages.
+- (admin) - page routes to admin side pages. See **## Admin side pages**
 - api - includes routes to:
-  1. auth
-  2. blog
-  3. comment
-  4. user
+  1. blog
+  2. comment
 - lib - includes:
   1. Schema models for mongoose
   2. Mongo connection
-  3. Service for nextAuth(WIP)
-- types - defining types for nextAuth (WIP) and MONGODB.
-- env.local - NEXTAUTH_SECRET, NEXTAUTH_URL and MONGODB_URI.
+  3. Blog get calls
+  4. Comment get calls
+- types - defining types MONGODB.
 - next.config.js = added domains for image usage. Check NextJS documentation on how to add domains for <Image>.
 
-## Extensions used
+## Extensions, libraries and frameworks used
 
+- Next.js
+- Mongo DB
+- Mongoose
+- date-fns
+- Typescript
+- CSS modules
 - Prettier
+- MongoDB for VS Code
 
 ## Learn More
 
@@ -81,5 +87,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-![Alt text](image.png)
