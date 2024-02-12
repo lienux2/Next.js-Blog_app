@@ -1,6 +1,6 @@
 // "use client"
 
-import { getOne } from "@/app/api/blog/route";
+import { GETONE } from "@/app/api/blog/route";
 import style from "./page.module.css";
 import { Button } from "@/app/(components)/Button/Button";
 import Link from "next/link";
@@ -19,7 +19,7 @@ type Blog = {
 
 export default async function EditPage({ params }: { params: { id: string } }) {
   const id: string = params.id;
-  const blogById = await getOne({ params: { id } });
+  const blogById = await GETONE({ params: { id } });
 
   return (
     <>
