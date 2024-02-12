@@ -9,5 +9,4 @@ const connectMongoDB = async () => {
     throw error;
   }
 };
-
 export { connectMongoDB };
