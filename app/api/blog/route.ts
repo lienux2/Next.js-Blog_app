@@ -79,7 +79,7 @@ export async function getByTag({ params }: { params: { tag: string } }) {
 export async function DELETE({ params }: { params: { id: string } }) {
   try {
     await connectMongoDB();
-    await BlogModel.findByIdAndDelete({ params: params.id });
+    await BlogModel.findByIdAndDelete({ _id: params.id });
     return NextResponse.json({ message: "Post deleted" }, { status: 200 });
   } catch (error) {
     return NextResponse.json(

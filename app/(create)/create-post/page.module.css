@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.input {
+  border: none;
+  background-color: #dfdfde;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.inputTitle {
+  width: 300px;
+}
+
+.imagePlace {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation {
+  background-color: lightgray;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+  .centered {
+    width: 400px;
+  }
+  .title {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .centered {
+    width: 250px;
+    margin-left: 20px;
+  }
+  .inputTitle {
+    width: 250px;
+  }
+  .select {
+    width: 250px;
+  }
+}

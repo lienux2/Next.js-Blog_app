@@ -7,76 +7,29 @@
   flex-wrap: wrap;
 }
 
-.welcomeMessage {
-  text-align: center;
+.image {
+  width: 600px;
+  height: 500px;
+  aspect-ratio: 1.2 / 1;
 }
 
-.title {
-  font-size: 70px;
-  padding: 10px 0;
-}
-
-.message {
-  font-size: 18px;
-  padding: 10px 0;
-  line-height: 1.4;
-}
-
-.brandName {
-  font-size: 24px;
-  color: #900c3f;
-  font-weight: bolder;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  gap: 50px;
-  max-width: 900px;
-
-  @media screen and (max-width: 1000px) {
-    flex-wrap: wrap;
-    text-wrap: wrap;
-    max-width: 700px;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 790px) {
-    flex-wrap: wrap;
-    text-wrap: wrap;
-    text-align: center;
-    max-width: 500px;
+@media (max-width: 700px) {
+  .image {
+    width: 500px;
+    height: 400px;
   }
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@media (max-width: 600px) {
+  .image {
+    width: 400px;
+    height: 300px;
+  }
 }
 
-.readMore {
-  width: 110px;
-  background-color: transparent;
-  font-weight: bold;
-  font-size: medium;
-  cursor: pointer;
-  color: #8caba8;
-  transition: color 0.4s;
-}
-
-.readMore:hover {
-  color: blueviolet;
-}
-
-.tag {
-  font-size: 18px;
-}
-
-.readMoreBtn {
-  background-color: #8caba8;
-  font-size: larger;
-  width: 120px;
+@media (max-width: 450px) {
+  .image {
+    width: 300px;
+    height: 200px;
+  }
 }

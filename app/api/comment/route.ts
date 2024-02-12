@@ -49,37 +49,40 @@ export async function getAllComments() {
   }
 }
 
-export async function DELETE(id: string) {
-  try {
-    await connectMongoDB();
-    const deletedComment = await CommentModel.findByIdAndDelete(id);
+// export async function DELETE(id: string) {
+//   try {
+//     await connectMongoDB();
+//     await CommentModel.find({_id: id}).deleteOne();
+//     return NextResponse.json({ message: "Comment Deleted" }, { status: 200 });
+//   } catch (error) {
+//     return NextResponse.json(
+//       { message: "Error deleting comment", error },
+//       { status: 500 }
+//     );
+//   }
+// }
 
-    if (!deletedComment) {
-      console.log("Comment not found for deletion");
-      return NextResponse.json(
-        { message: "Comment not found" },
-        { status: 404 }
-      );
+export async function DELETE(id: string ) {
+    try {
+      await connectMongoDB();
+  
+      await CommentModel.findByIdAndDelete({_id: id});
+  
+      return NextResponse.json({ message: "Comment Deleted" }, { status: 200 });
+    } catch (error) {
+      console.log(error);
+      return NextResponse.json({ message: "Error", error }, { status: 500 });
     }
-
-    console.log("Comment deleted successfully");
-    return deletedComment;
-  } catch (error) {
-    return NextResponse.json(
-      { message: "Error deleting comment", error },
-      { status: 500 }
-    );
   }
-}
 
-// export async function GETCOUNT({ params }: { params: { id: string } }) {
-//     try {
-//         await connectMongoDB();
-//         const id = params.id
-//         const comments = await CommentModel.find({blogId: id}).countDocuments();
-//         return NextResponse.json({ comments }, { status: 500 });
-
-//     } catch (error) {
-//         return NextResponse.json({ message: "Error getting blogs", error }, { status: 500 });
-//     }
+// export async function GETCOUNT(id: string) {
+//   try {
+//     await connectMongoDB();
+//     return await CommentModel.countDocuments({ blogId: id });
+//   } catch (error) {
+//     return NextResponse.json(
+//       { message: "Error getting comment count", error },
+//       { status: 500 }
+//     );
+//   }
 // }

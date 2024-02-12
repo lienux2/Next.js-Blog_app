@@ -14,6 +14,7 @@ export const loginUser = async ({
   await connectMongoDB();
 
   if (!username || !password) {
+    console.log("data not entered");
     throw new Error("Username or password not entered");
   }
 
@@ -22,6 +23,7 @@ export const loginUser = async ({
   });
 
   if (!user) {
+    console.log("data not exist");
     throw new Error("This username does not exist");
   }
 
@@ -30,6 +32,7 @@ export const loginUser = async ({
     console.log(user.password);
 
     if (!isValid) {
+      console.log("data not correct");
       throw new Error("This password is not correct");
     }
   } else {

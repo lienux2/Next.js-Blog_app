@@ -14,7 +14,7 @@ Second, run the development server:
 npm run dev
 ```
 
-Third: create file named .env.local like so in picture below and inside should be: 
+Third: create file named .env.local like so in picture below and inside should be:
 MONGODB_URI = (link to your mongoDB)
 
 Open [http://localhost:3000] with your browser to see the result.
@@ -70,6 +70,7 @@ Create Post page: [http://localhost:3000/create]
 - next.config.js = added domains for image usage. Check NextJS documentation on how to add domains for <Image>.
 
 ## Extensions used
+
 - Prettier
 
 ## Learn More

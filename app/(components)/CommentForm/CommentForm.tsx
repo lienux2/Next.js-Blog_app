@@ -78,11 +78,7 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
                 ></textarea>
               </div>
               <div className={style.btnWrapper}>
-                <button
-                  className={style.addBtn}
-                  type="submit"
-                  formMethod="POST"
-                >
+                <button className={style.addBtn} formMethod="POST">
                   Add
                 </button>
               </div>

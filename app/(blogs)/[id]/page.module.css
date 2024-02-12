@@ -5,21 +5,6 @@
   margin: 50px 150px;
 }
 
-.back {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
-
-.backBtn {
-  background-color: darkolivegreen;
-  color: azure;
-}
-
-.allBtn {
-  background-color: indianred;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -77,4 +62,20 @@
 
 .name {
   color: brown;
+}
+
+.commentInfo {
+  border: 1px solid black;
+  border-radius: 10px;
+ background-color: rgba(208, 19, 57, 0.262);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentTime {
+  font-size: 13px;
+  font-style: italic;
+  color: #666;
 }

@@ -1,70 +1,29 @@
-import Link from "next/link";
-import { LatestPosts } from "../(components)/Latest/LatestPosts";
-import style from "./page.module.css";
-import { GET } from "../api/blog/route";
 import Image from "next/image";
 
+import style from "./page.module.css";
+import image from "../../public/40-600x500.jpg";
+import { Greeting } from "../(components)/Greeting/Greeting";
+import { LatestBlogs } from "../(components)/LatestBlogs/LatestBlogs";
+import { AllBlogs } from "../(components)/AllBlogs/AllBlogs";
+
 export default async function Home() {
-  const allBlogs = await GET();
 
   return (
     <>
-      <div className={style.welcomeMessage}>
-        <h1 className={style.title}>Welcome to Paw in Hand!</h1>
-        <p className={style.message}>
-          Just as people find connection hand in hand, we believe in forging
-          bonds with our pets, <br /> going <span className={style.brandName}>Paw in Hand</span> on the journey of
-          companionship and joy.
-        </p>
-      </div>
+      <Greeting />
       <div className={style.container}>
         <div>
           <Image
-            src="https://picsum.photos/id/40/600/500"
+            src={image}
             className={style.image}
-            width={600}
-            height={500}
             alt="main_photo"
             priority
           />
         </div>
-        <LatestPosts />
+        <LatestBlogs />
       </div>
 
-      <div className={style.container}>
-        <div>
-          {allBlogs?.map(
-            (blog: {
-              tag: string;
-              title: string;
-              description: string;
-              _id: string;
-              image: string;
-            }) => (
-              <div key={blog._id} className={style.content}>
-                <div>
-                  <Image
-                    src={blog.image}
-                    width={420}
-                    height={420}
-                    alt="post image"
-                  />
-                </div>
-                <div className={style.info}>
-                  <h5 className={style.tag}>{blog.tag}</h5>
-                  <h1>
-                    {blog.title} <span className={style.commentCount}></span>
-                  </h1>
-                  <p>{blog.description}</p>
-                  <Link href={`/${blog._id}`}>
-                    <button className={style.readMoreBtn}>Read more</button>
-                  </Link>
-                </div>
-              </div>
-            )
-          )}
-        </div>
-      </div>
+      <AllBlogs />
     </>
   );
 }

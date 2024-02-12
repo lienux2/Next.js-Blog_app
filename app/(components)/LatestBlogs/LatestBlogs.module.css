@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  word-wrap: break-word;
+  max-width: 300px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 750px) {
+  .content {
+    flex-wrap: wrap;
+  }
+  .postInfo {
+    padding: 0 20px;
+    text-align: center;
+  }
+}

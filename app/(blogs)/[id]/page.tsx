@@ -4,8 +4,10 @@ import { CommentForm } from "@/app/(components)/CommentForm/CommentForm";
 import { GET } from "@/app/api/comment/route";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/app/(components)/Button/Button";
+import { format } from "date-fns";
 
-interface Blog {
+type Blog = {
   tag: string;
   title: string;
   description: string;
@@ -13,7 +15,7 @@ interface Blog {
   author: string;
   largeDescription: string;
   image: string;
-}
+};
 
 type Comments = {
   _id: string;
@@ -33,16 +35,11 @@ export default async function PostByID({ params }: { params: { id: string } }) {
       <div className={style.container}>
         {blogById ? (
           <>
-            <div className={style.back}>
-              <Link href="/">
-                <button className={style.backBtn}>Back</button>
-              </Link>
-            </div>
-            <div key={(blogById as Blog)._id} className={style.content}>
+            <div key={blogById._id} className={style.content}>
               <div className={style.contentInfo}>
                 <div>
                   <Image
-                    src={(blogById as Blog).image}
+                    src={blogById.image}
                     width={420}
                     height={420}
                     alt="blog image"
@@ -50,22 +47,38 @@ export default async function PostByID({ params }: { params: { id: string } }) {
                 </div>
 
                 <div className={style.info}>
-                  <h1>{(blogById as Blog).title}</h1>
-                  <Link href={`${(blogById as Blog).tag}`}>
-                    <h3>{(blogById as Blog).tag}</h3>
+                  <h1>{blogById.title}</h1>
+                  <Link href={`${blogById.tag}`}>
+                    <h3>{blogById.tag}</h3>
                   </Link>
-                  <h6>Written by {(blogById as Blog).author}</h6>
+                  <h6>Written by {blogById.author}</h6>
+                  <div>
+                    <p className={style.commentTime}>
+                      <span>Created at: </span>
+                      {format(
+                        new Date(blogById.createdAt),
+                        "d MMMM, yyyy // h:mm a"
+                      )}
+                    </p>
+                    <p className={style.commentTime}>
+                      <span>Last updated: </span>
+                      {format(
+                        new Date(blogById.updatedAt),
+                        "d MMMM, yyyy // h:mm a"
+                      )}
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className={style.paragraph}>
-                <p>{(blogById as Blog).largeDescription}</p>
+                <p>{blogById.largeDescription}</p>
               </div>
             </div>
 
             <div className={style.content}>
               <Link href={"/"}>
-                <button className={style.allBtn}>All posts</button>
+                <Button buttonName="All Posts" buttonStyle="allPosts" />
               </Link>
             </div>
           </>
@@ -91,12 +104,18 @@ export default async function PostByID({ params }: { params: { id: string } }) {
                   <h1>All comments:</h1>
                 </div>
                 {comments?.map((comment: Comments) => (
-                  <div key={comment._id}>
+                  <div key={comment._id} className={style.commentInfo}>
+                    <p className={style.commentTime}>
+                      {format(
+                        new Date(comment.createdAt),
+                        "d MMMM, yyyy // h:mm a"
+                      )}
+                    </p>
+
                     <h3>
                       <span className={style.name}>{comment.name}</span> says:
                     </h3>
                     <p className={style.comment}>{comment.comment}</p>
-                    {/* <p>{comment.createdAt}</p> */}
                   </div>
                 ))}
               </div>
