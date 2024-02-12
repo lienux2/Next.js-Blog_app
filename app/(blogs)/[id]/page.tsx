@@ -1,4 +1,4 @@
-import { getOne } from "@/app/api/blog/route";
+import { GETONE } from "@/app/api/blog/route";
 import style from "./page.module.css";
 import { CommentForm } from "@/app/(components)/CommentForm/CommentForm";
 import { GET } from "@/app/api/comment/route";
@@ -27,7 +27,7 @@ type Comments = {
 
 export default async function PostByID({ params }: { params: { id: string } }) {
   const id: string = params.id;
-  const blogById = await getOne({ params: { id } });
+  const blogById = await GETONE({ params: { id } });
   const comments = await GET({ params: { id } });
 
   return (

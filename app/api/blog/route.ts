@@ -32,7 +32,7 @@ export async function GET() {
   }
 }
 
-export async function getOne({ params }: { params: { id: string } }) {
+export async function GETONE({ params }: { params: { id: string } }) {
   try {
     await connectMongoDB();
     const id = params.id;
@@ -76,10 +76,10 @@ export async function getByTag({ params }: { params: { tag: string } }) {
   }
 }
 
-export async function DELETE({ params }: { params: { id: string } }) {
+export async function DELETE(id: string) {
   try {
     await connectMongoDB();
-    await BlogModel.findByIdAndDelete({ _id: params.id });
+    await BlogModel.findByIdAndDelete({ _id: id });
     return NextResponse.json({ message: "Post deleted" }, { status: 200 });
   } catch (error) {
     return NextResponse.json(

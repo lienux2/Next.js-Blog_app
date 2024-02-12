@@ -1,10 +1,13 @@
+
 import { DELETE, getAllComments } from "@/app/api/comment/route";
 import style from "./AllComments.module.css"
 import { Button } from "../Button/Button";
+// import { DeleteComment } from "../DeleteComment/DeleteComment";
 
 
 export const AllComments = async () => {
     const comments = await getAllComments();
+
     return (
         <>
     {comments.length > 0 ? (
@@ -16,9 +19,10 @@ export const AllComments = async () => {
                         <h1>From {comment.name}</h1>
                         <p>{comment.comment}</p>
                       </div>
-                      <div>
-                        <Button buttonName="X" buttonStyle="delete"/>
-                      </div>
+{/* <DeleteComment id={comment._id}/> */}
+<div>
+        <Button buttonName="X" buttonStyle="delete" click={() => console.log("clicked", comment._id)} />
+      </div>
                     </div>
                   )
                 )}

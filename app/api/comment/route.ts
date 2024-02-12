@@ -66,7 +66,7 @@ export async function DELETE(id: string ) {
     try {
       await connectMongoDB();
   
-      await CommentModel.findByIdAndDelete({_id: id});
+      await CommentModel.deleteOne({_id: id});
   
       return NextResponse.json({ message: "Comment Deleted" }, { status: 200 });
     } catch (error) {

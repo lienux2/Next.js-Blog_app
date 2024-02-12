@@ -2,6 +2,7 @@
 import { useState } from "react";
 import style from "./CommentForm.module.css";
 import { useRouter } from "next/navigation";
+import { Button } from "../Button/Button";
 
 export const CommentForm = ({ blogId }: { blogId: string }) => {
   const initialFormData = {
@@ -78,9 +79,7 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
                 ></textarea>
               </div>
               <div className={style.btnWrapper}>
-                <button className={style.addBtn} formMethod="POST">
-                  Add
-                </button>
+                <Button buttonName="Add" buttonStyle="add"/>
               </div>
             </div>
           </div>

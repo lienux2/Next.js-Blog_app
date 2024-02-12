@@ -1,3 +1,5 @@
+"use client"
+
 import { DELETE, getAllComments } from "@/app/api/comment/route";
 import style from "./page.module.css";
 import { Button } from "@/app/(components)/Button/Button";
