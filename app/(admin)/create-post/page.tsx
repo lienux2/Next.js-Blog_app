@@ -41,6 +41,7 @@ export default function CreatePostPage() {
       throw new Error("Failed to create blog");
     }
 
+    router.refresh();
     router.push("/all-posts");
     router.prefetch("/all-posts");
   };

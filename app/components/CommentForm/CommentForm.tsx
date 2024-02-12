@@ -3,6 +3,7 @@ import { useState } from "react";
 import style from "./CommentForm.module.css";
 import { useRouter } from "next/navigation";
 import { Button } from "../Button/Button";
+import getAllComments from "@/app/lib/comments/getAllComments";
 
 export const CommentForm = ({ blogId }: { blogId: string }) => {
   const initialFormData = {
@@ -37,6 +38,7 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
 
     router.refresh();
     setFormData(initialFormData);
+    getAllComments();
     router.prefetch('all-comments')
   };
 
