@@ -10,9 +10,7 @@ export default function CreateLayout({
 }) {
   return (
     <html lang="en">
-      <body className={exo2.className}>
-        {children}
-      </body>
+      <body className={exo2.className}>{children}</body>
     </html>
   );
 }

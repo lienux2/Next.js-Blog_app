@@ -31,7 +31,7 @@ export default function LoginPage() {
               />
             </div>
             <div className={style.btnWrapper}>
-              <Button buttonName="Login" buttonStyle="add"/>
+              <Button buttonName="Login" buttonStyle="add" />
             </div>
           </form>
         </div>

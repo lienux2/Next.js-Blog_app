@@ -79,7 +79,7 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
                 ></textarea>
               </div>
               <div className={style.btnWrapper}>
-                <Button buttonName="Add" buttonStyle="add"/>
+                <Button buttonName="Add" buttonStyle="add" />
               </div>
             </div>
           </div>

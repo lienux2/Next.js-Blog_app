@@ -5,17 +5,17 @@ import { Button } from "@/app/components/Button/Button";
 import getBlogByTag from "@/app/lib/blogs/getBlogByTag";
 
 type Blog = {
-    _id: string;
-    title: string;
-    tag: string;
-    author: string;
-    description: string;
-    createdAt: Date;
-    updatedAt: Date;
-    largeDescription: string;
-    image: string;
-    postImage: string;
-  };
+  _id: string;
+  title: string;
+  tag: string;
+  author: string;
+  description: string;
+  createdAt: Date;
+  updatedAt: Date;
+  largeDescription: string;
+  image: string;
+  postImage: string;
+};
 
 export default async function ExoticPage({
   params,
@@ -24,9 +24,8 @@ export default async function ExoticPage({
 }) {
   const tag: string = "Exotic";
 
-  const blogByTagData: Promise<Blog[]> = getBlogByTag({ params: { tag } })
+  const blogByTagData: Promise<Blog[]> = getBlogByTag({ params: { tag } });
   const blogs = await blogByTagData;
-
 
   return (
     <>

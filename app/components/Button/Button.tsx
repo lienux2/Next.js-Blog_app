@@ -14,17 +14,10 @@ type ButtonProps = {
   click?: () => void;
 };
 
-export const Button = ({
-  buttonName,
-  buttonStyle,
-  click,
-}: ButtonProps) => {
+export const Button = ({ buttonName, buttonStyle, click }: ButtonProps) => {
   return (
     <>
-      <button
-        className={`button ${buttonStyle}`}
-        onClick={click}
-      >
+      <button className={`button ${buttonStyle}`} onClick={click}>
         {buttonName}
       </button>
     </>

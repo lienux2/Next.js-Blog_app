@@ -2,7 +2,6 @@ import Link from "next/link";
 import style from "./page.module.css";
 
 export default async function MainPage() {
-
   return (
     <>
       <div className={style.container}>

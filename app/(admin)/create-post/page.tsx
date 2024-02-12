@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import style from "./page.module.css";
@@ -159,10 +159,7 @@ export default function CreatePostPage() {
           </div>
 
           <div className={style.centered}>
-            <Button
-              buttonName="Add Post"
-              buttonStyle="add"
-            />
+            <Button buttonName="Add Post" buttonStyle="add" />
           </div>
         </form>
       </div>

@@ -5,17 +5,17 @@ import Image from "next/image";
 import getBlog from "@/app/lib/blogs/getBlog";
 
 type Blog = {
-    _id: string;
-    title: string;
-    tag: string;
-    author: string;
-    description: string;
-    createdAt: Date;
-    updatedAt: Date;
-    largeDescription: string;
-    image: string;
-    postImage: string;
-  };
+  _id: string;
+  title: string;
+  tag: string;
+  author: string;
+  description: string;
+  createdAt: Date;
+  updatedAt: Date;
+  largeDescription: string;
+  image: string;
+  postImage: string;
+};
 
 export default async function EditPage({ params }: { params: { id: string } }) {
   const id: string = params.id;
@@ -45,7 +45,7 @@ export default async function EditPage({ params }: { params: { id: string } }) {
             <form>
               <h3 className={style.title}>Edit Blog Post</h3>
               <div className={style.centered}>
-              <label htmlFor="title">Post Title:</label>
+                <label htmlFor="title">Post Title:</label>
                 <input
                   type="text"
                   id="title"
@@ -57,7 +57,7 @@ export default async function EditPage({ params }: { params: { id: string } }) {
               </div>
               <div className={style.centered}>
                 <div className={style.select}>
-                <label htmlFor="tag">Post Tag:</label>
+                  <label htmlFor="tag">Post Tag:</label>
                   <select name="tag" id="tag" className={style.input}>
                     <option value="">{blog.tag}</option>
                     <option value="health">Health</option>
@@ -74,7 +74,7 @@ export default async function EditPage({ params }: { params: { id: string } }) {
                     <option value="Robert">Robert Williams</option>
                   </select>
                   <div>
-                  <label htmlFor="description">Post Small Description:</label>
+                    <label htmlFor="description">Post Small Description:</label>
                     <textarea
                       name="description"
                       id="description"
@@ -100,7 +100,12 @@ export default async function EditPage({ params }: { params: { id: string } }) {
                     className={style.input}
                   />
                   <div className={style.imagePreview}>
-                    <Image src={blog.image} width={320} height={320} alt="image_preview"/>
+                    <Image
+                      src={blog.image}
+                      width={320}
+                      height={320}
+                      alt="image_preview"
+                    />
                   </div>
                   <label htmlFor="postImage">Post Big Image:</label>
                   <input
@@ -112,13 +117,20 @@ export default async function EditPage({ params }: { params: { id: string } }) {
                     className={style.input}
                   />
                   <div className={style.imagePreview}>
-                  <Image src={blog.postImage} width={1000} height={400} alt="image_preview"/>
+                    <Image
+                      src={blog.postImage}
+                      width={1000}
+                      height={400}
+                      alt="image_preview"
+                    />
                   </div>
                 </div>
               </div>
 
               <div className={style.centered}>
-              <label htmlFor="largeDescription">Post Description (large):</label>
+                <label htmlFor="largeDescription">
+                  Post Description (large):
+                </label>
                 <textarea
                   name="text"
                   id="largeDescription"

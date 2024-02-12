@@ -4,18 +4,17 @@ import getAllComments from "@/app/lib/comments/getAllComments";
 import Link from "next/link";
 
 type Comment = {
-    _id: string;
-    blogId: string;
-    name: string;
-    comment: string;
-    createdAt: Date;
-    updatedAt: Date;
-  };
+  _id: string;
+  blogId: string;
+  name: string;
+  comment: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
 
-export default async function AllCommentsPage () {
-
-const allCommentsData: Promise<Comment[]> = getAllComments();
-const comments = await allCommentsData;
+export default async function AllCommentsPage() {
+  const allCommentsData: Promise<Comment[]> = getAllComments();
+  const comments = await allCommentsData;
 
   return (
     <>
@@ -33,9 +32,9 @@ const comments = await allCommentsData;
       <h1 className={style.title}>All comments:</h1>
 
       <div className={style.container}>
-      {comments.length > 0 ? (
-        <>
-          {comments?.map((comment) => (
+        {comments.length > 0 ? (
+          <>
+            {comments?.map((comment) => (
               <div key={comment._id} className={style.content}>
                 <div className={style.comment}>
                   <h1>From {comment.name}</h1>
@@ -46,15 +45,14 @@ const comments = await allCommentsData;
                   <Button buttonName="X" buttonStyle="delete" />
                 </div>
               </div>
-            )
-          )}
-        </>
-      ) : (
-        <div className={style.content}>
-          <h1>No Comments At This Time.</h1>
-        </div>
-      )}
+            ))}
+          </>
+        ) : (
+          <div className={style.content}>
+            <h1>No Comments At This Time.</h1>
+          </div>
+        )}
       </div>
     </>
   );
-};
+}

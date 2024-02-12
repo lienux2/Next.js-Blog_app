@@ -5,20 +5,19 @@ import { Button } from "@/app/components/Button/Button";
 import getAllBlogs from "@/app/lib/blogs/getAllBlogs";
 
 type Blog = {
-    _id: string;
-    title: string;
-    tag: string;
-    author: string;
-    description: string;
-    createdAt: Date;
-    updatedAt: Date;
-    largeDescription: string;
-    image: string;
-    postImage: string;
-  };
+  _id: string;
+  title: string;
+  tag: string;
+  author: string;
+  description: string;
+  createdAt: Date;
+  updatedAt: Date;
+  largeDescription: string;
+  image: string;
+  postImage: string;
+};
 
 export default async function AllPostsPage() {
-
   const allBlogsData: Promise<Blog[]> = getAllBlogs();
   const allBlogs = await allBlogsData;
 

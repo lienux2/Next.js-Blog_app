@@ -20,8 +20,6 @@ type Blog = {
   postImage: string;
 };
 
-
-
 export default async function HomePage() {
   const blogsData: Promise<Blog[]> = getAllBlogs();
 
@@ -34,7 +32,7 @@ export default async function HomePage() {
   return (
     <>
       <Greeting />
-      
+
       <div className={style.container}>
         <div>
           <Image
