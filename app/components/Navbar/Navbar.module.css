@@ -40,10 +40,10 @@
 
   .navigationMobile {
     display: inherit;
-    font-size: 30px;
+    font-size: 20px;
     text-align: right;
-    padding: 0 50px;
-    margin-bottom: -20px;
+    padding: 0 30px;
+    margin-bottom: -30px;
     transition-timing-function: ease-in-out;
   }
 }
