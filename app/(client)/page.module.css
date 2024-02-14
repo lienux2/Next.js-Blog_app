@@ -19,12 +19,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 300px;
   gap: 20px;
 }
 
 .blogsContent {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   margin-bottom: 50px;
   gap: 50px;
@@ -54,11 +55,12 @@
 
 @media (max-width: 1000px) {
   .blogsContent {
-    flex-wrap: wrap;
     gap: 20px;
+    flex-direction: column;
   }
   .info {
     padding: 0 50px;
+    align-items: center;
   }
   .blogsImage {
     width: 350px;
@@ -67,11 +69,7 @@
 }
 
 @media (max-width: 750px) {
-  .content {
-    flex-wrap: wrap;
-  }
-  .postInfo {
-    padding: 0 20px;
+  .title {
     text-align: center;
   }
 }
@@ -100,6 +98,15 @@
   .blogsImage {
     width: 250px;
     height: 250px;
+  }
+  .latestContainer {
+    justify-content: center;
+  }
+  .content {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
   }
 }
 

@@ -1,8 +1,4 @@
 .navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
   padding: 40px 0;
   background-color: #a2798f;
   color: #dfdfde;
@@ -10,9 +6,44 @@
   transition: font-size 0.4s;
 }
 
+.navigationLarge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.menuIcon {
+  transition: color 0.5s;
+}
+
+.menuIcon:hover {
+  cursor: pointer;
+  background-color: #a2798f;
+  color: #900c3f;
+}
+
+.navigationMobile {
+  display: none;
+  transition: all 0.9s;
+  transition-duration: 5s;
+}
+
+.hideMenu {
+  display: none;
+}
+
 @media (max-width: 900px) {
-  .navigation {
-    flex-wrap: wrap;
-    padding: 40px 20px;
+  .navigationLarge {
+    display: none;
+  }
+
+  .navigationMobile {
+    display: inherit;
+    font-size: 30px;
+    text-align: right;
+    padding: 0 50px;
+    margin-bottom: -20px;
+    transition-timing-function: ease-in-out;
   }
 }

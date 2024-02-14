@@ -44,7 +44,7 @@ export default async function HomePage() {
         </div>
 
         <div>
-          <h1>Latest Posts</h1>
+          <h1 className={style.title}>Latest Posts</h1>
           <div>
             {latestPosts?.map((blog) => (
               <div key={blog._id} className={style.latestContainer}>

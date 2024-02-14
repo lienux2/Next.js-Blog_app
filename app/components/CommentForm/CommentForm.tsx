@@ -13,6 +13,8 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
   };
 
   const [formData, setFormData] = useState(initialFormData);
+  const [isLoading, setIsLoading] = useState(false);
+
   const router = useRouter();
 
   const handleChange = (e: { target: { value: string; name: string } }) => {
@@ -25,8 +27,13 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
     }));
   };
 
+  // const handleLoading = () => {
+  //   setIsLoading(true);
+  // }
+
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    setIsLoading(true)
     const res = await fetch("/api/comment", {
       method: "POST",
       body: JSON.stringify({ formData }),
@@ -35,9 +42,9 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
     if (!res.ok) {
       throw new Error("Failed to add comment");
     }
-
     router.refresh();
     setFormData(initialFormData);
+    setIsLoading(false)
     await getAllComments();
     router.prefetch('all-comments')
   };
@@ -82,7 +89,11 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
                 ></textarea>
               </div>
               <div className={style.btnWrapper}>
-                <Button buttonName="Add" buttonStyle="add" />
+                {isLoading ? (
+                  <Button buttonName="Adding comment.." buttonStyle="loading" disabled={true}/>
+                  ) : (
+                  <Button buttonName="Add" buttonStyle="add" />
+                )}
               </div>
             </div>
           </div>

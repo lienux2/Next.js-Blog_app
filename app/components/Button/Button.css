@@ -57,3 +57,7 @@ button:hover {
 .navigation:hover {
   background-color: violet;
 }
+
+.loading {
+  background-color: lightgray;
+}

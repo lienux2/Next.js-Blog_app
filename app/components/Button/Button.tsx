@@ -10,14 +10,16 @@ type ButtonProps = {
     | "add"
     | "delete"
     | "edit"
-    | "navigation";
+    | "navigation"
+    | "loading";
   click?: () => void;
+  disabled?: boolean;
 };
 
-export const Button = ({ buttonName, buttonStyle, click }: ButtonProps) => {
+export const Button = ({ buttonName, buttonStyle, click, disabled=false }: ButtonProps) => {
   return (
     <>
-      <button className={`button ${buttonStyle}`} onClick={click}>
+      <button className={`button ${buttonStyle}`} onClick={click} disabled={disabled}>
         {buttonName}
       </button>
     </>

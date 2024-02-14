@@ -78,6 +78,7 @@ Create Post page: [http://localhost:3000/create-post]
 - CSS modules
 - Prettier
 - MongoDB for VS Code
+- react-icons
 
 ## Learn More
 
