@@ -33,7 +33,7 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    setIsLoading(true)
+    setIsLoading(true);
     const res = await fetch("/api/comment", {
       method: "POST",
       body: JSON.stringify({ formData }),
@@ -44,9 +44,9 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
     }
     router.refresh();
     setFormData(initialFormData);
-    setIsLoading(false)
+    setIsLoading(false);
     await getAllComments();
-    router.prefetch('all-comments')
+    router.prefetch("all-comments");
   };
 
   return (
@@ -90,8 +90,12 @@ export const CommentForm = ({ blogId }: { blogId: string }) => {
               </div>
               <div className={style.btnWrapper}>
                 {isLoading ? (
-                  <Button buttonName="Adding comment.." buttonStyle="loading" disabled={true}/>
-                  ) : (
+                  <Button
+                    buttonName="Adding comment.."
+                    buttonStyle="loading"
+                    disabled={true}
+                  />
+                ) : (
                   <Button buttonName="Add" buttonStyle="add" />
                 )}
               </div>

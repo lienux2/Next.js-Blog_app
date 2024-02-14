@@ -48,8 +48,9 @@ export default async function BlogPage({ params }: { params: { id: string } }) {
                 <div>
                   <Image
                     src={blog.image}
-                    width={420}
-                    height={420}
+                    className={style.image}
+                    width={600}
+                    height={600}
                     alt="blog image"
                   />
                 </div>

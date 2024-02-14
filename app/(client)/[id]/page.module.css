@@ -36,7 +36,6 @@
 .paragraph {
   text-align: justify;
   max-width: 1200px;
-  min-width: 400px;
   line-height: 1.6;
   font-size: 20px;
 }
@@ -78,4 +77,39 @@
   font-size: 13px;
   font-style: italic;
   color: #666;
+}
+
+@media (max-width: 1300px) {
+  .image {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .contentInfo {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+  .container {
+    margin: 50px 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+  .container {
+    margin: 50px 40px;
+  }
 }

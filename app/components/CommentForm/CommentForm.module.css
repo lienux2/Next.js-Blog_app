@@ -48,3 +48,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 450px) {
+  .textarea {
+    width: 250px;
+  }
+}

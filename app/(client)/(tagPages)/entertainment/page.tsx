@@ -31,6 +31,9 @@ export default async function EntertainmentPage({
     <>
       <div className={style.container}>
         <div>
+          <h1 className={style.pageHeading}>
+            Posts with tag <span className={style.pageTag}>{tag}</span>:
+          </h1>
           {blogs && blogs.length > 0 ? (
             <>
               {blogs?.map(
@@ -41,25 +44,30 @@ export default async function EntertainmentPage({
                   _id: string;
                   image: string;
                 }) => (
-                  <div key={blog._id} className={style.content}>
-                    <div>
-                      <Image
-                        src={blog.image}
-                        className={style.image}
-                        width={420}
-                        height={420}
-                        alt="post image"
-                      />
+                  <>
+                    <div key={blog._id} className={style.content}>
+                      <div>
+                        <Image
+                          src={blog.image}
+                          className={style.image}
+                          width={420}
+                          height={420}
+                          alt="post image"
+                        />
+                      </div>
+                      <div className={style.info}>
+                        <h5 className={style.tag}>{blog.tag}</h5>
+                        <h1>{blog.title}</h1>
+                        <p>{blog.description}</p>
+                        <Link href={`/${blog._id}`}>
+                          <Button
+                            buttonName="Read More"
+                            buttonStyle="readMore"
+                          />
+                        </Link>
+                      </div>
                     </div>
-                    <div className={style.info}>
-                      <h5 className={style.tag}>{blog.tag}</h5>
-                      <h1>{blog.title}</h1>
-                      <p>{blog.description}</p>
-                      <Link href={`/${blog._id}`}>
-                        <Button buttonName="Read More" buttonStyle="readMore" />
-                      </Link>
-                    </div>
-                  </div>
+                  </>
                 )
               )}
             </>

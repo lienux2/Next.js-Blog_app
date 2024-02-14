@@ -25,6 +25,7 @@
 
 .navigationMobile {
   display: none;
+  justify-content: space-between;
   transition: all 0.9s;
   transition-duration: 5s;
 }

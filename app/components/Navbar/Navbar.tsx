@@ -39,7 +39,11 @@ export const Navbar = () => {
           >
             {menuLinks.map((link) => (
               <h3 key={link.href} className={style.navigationOption}>
-                <Link className={style.navLink} href={link.href}>
+                <Link
+                  className={style.navLink}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   {link.label}
                 </Link>
               </h3>

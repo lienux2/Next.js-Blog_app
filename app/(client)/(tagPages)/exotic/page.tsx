@@ -31,6 +31,9 @@ export default async function ExoticPage({
     <>
       <div className={style.container}>
         <div>
+          <h1 className={style.pageHeading}>
+            Posts with tag <span className={style.pageTag}>{tag}</span>:
+          </h1>
           {blogs && blogs.length > 0 ? (
             <>
               {blogs?.map(
